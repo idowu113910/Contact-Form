@@ -19,6 +19,10 @@ body {
 background-color: var(--Green-200-lighter);
   font-family: "Karla", sans-serif;
 }
+
+.success {
+  position: fixed;
+}
    
 
 

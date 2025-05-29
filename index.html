@@ -1,102 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CLASSWORK</title>
-    <link rel="stylesheet" href="style.css">
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body>
-   <div class="main-con bg-white    
-   w-[345px] sm:w-full   
-   sm:max-w-[600px] rounded-2xl mx-auto 
-   my-[30px] sm:my-[100px] p-7.5 flex flex-col gap-8">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div
+      class="main-con bg-white w-[345px] sm:w-full sm:max-w-[600px] rounded-2xl mx-auto my-[30px] sm:my-[100px] p-7.5 flex flex-col gap-8"
+    >
+      <div
+        class="flex justify-center absolute sm:left-[35%] sm:right-[35%] top-[10px] left-[15%] right-[15%]"
+      >
+        <div
+          class="success bg-[#06382e] text-white rounded-2xl p-5 flex flex-col items-start gap-3 w-[250px] sm:w-[350px] hidden"
+        >
+          <div class="flex items-center gap-2">
+            <img src="/images/icon-success-check.svg" alt="" />
+            <h3>Message Sent!</h3>
+          </div>
 
-   <div class="flex justify-center absolute sm:left-[35%] sm:right-[35%] top-[10px] left-[15%] right-[15%] ">
+          <p class="text-[12px] font-normal">
+            Thanks for completing the form, We`ll be in touch soon!
+          </p>
+        </div>
+      </div>
 
-          <div class="success bg-[#06382e] text-white rounded-2xl p-5 flex flex-col items-start gap-3
-            w-[250px] sm:w-[350px] hidden">
+      <!-- ============================================================================= -->
 
-              <div class="flex items-center gap-2">
-                <img src="/images/icon-success-check.svg" alt="">
-                <h3>Message Sent!</h3>
-              </div>
+      <h2 class="text-[32px] font-bold text-[var(--Grey-900-darker)]">
+        Contact Us
+      </h2>
 
-              <p class="text-[12px] font-normal">
-                Thanks for completing the form, We`ll be in touch soon!</p>
-            </div>
-   </div>
+      <form
+        action=""
+        class="contactForm w-full flex flex-col items-start gap-6"
+      >
+        <!-- =============Name Fields===================== -->
+        <div
+          class="w-full flex flex-col sm:flex-row sm:items-center items-start gap-4"
+        >
+          <div class="flex-1 flex flex-col gap-2 w-full h-[80px]">
+            <label
+              for="f-name"
+              class="font-normal text-[var(--Grey-900-darker)]"
+              >First Name
+              <span class="ml-2 text-[var(--Green-600-medium)]"> *</span></label
+            >
+            <input
+              type="text"
+              name="f-name"
+              class="firstName border border-[var(--Grey-500-medium)] rounded-md px-4 py-2 cursor-pointer hover:border-[var(--Green-600-medium)]"
+            />
 
+            <span class="error-fn text-[14px] text-[var(--Red)] hidden"
+              >This field is required</span
+            >
+          </div>
 
-   <!-- ============================================================================= -->
+          <div class="flex-1 flex flex-col gap-2 w-full h-[80px]">
+            <label
+              for="l-name"
+              class="font-normal text-[var(--Grey-900-darker)]"
+              >Last Name
+              <span class="ml-2 text-[var(--Green-600-medium)]"> *</span></label
+            >
+            <input
+              type="text"
+              name="l-name"
+              class="lastName border border-[var(--Grey-500-medium)] rounded-md px-4 py-2 cursor-pointer hover:border-[var(--Green-600-medium)]"
+            />
 
-
-
-
-    <h2 class="text-[32px] font-bold text-[var(--Grey-900-darker)]">Contact Us</h2>
-
-    <form action="" class="contactForm w-full flex flex-col items-start gap-6">
-
-         <!-- =============Name Fields===================== -->
-        <div class="w-full flex flex-col sm:flex-row sm:items-center items-start gap-4">
-            <div class="flex-1 flex flex-col gap-2 w-full h-[80px]">
-                <label for="f-name" class="font-normal text-[var(--Grey-900-darker)]">First Name <span class="ml-2 text-[var(--Green-600-medium)]"> *</span></label>
-                <input type="text" name="f-name"  class="firstName border border-[var(--Grey-500-medium)] rounded-md px-4 py-2 cursor-pointer hover:border-[var(--Green-600-medium)]">
-
-                <span class="error-fn text-[14px] text-[var(--Red)] hidden">This field is required</span>
-            </div>
-
-            <div class="flex-1 flex flex-col gap-2 w-full h-[80px]">
-                 <label for="l-name" class="font-normal text-[var(--Grey-900-darker)]">Last Name <span class="ml-2 text-[var(--Green-600-medium)]">  *</span></label>
-                <input type="text" name="l-name" class="lastName border border-[var(--Grey-500-medium)] rounded-md px-4 py-2 cursor-pointer hover:border-[var(--Green-600-medium)]">
-
-                <span class="error-ln text-[14px] text-[var(--Red)] hidden">This field is required</span>
-            </div>
+            <span class="error-ln text-[14px] text-[var(--Red)] hidden"
+              >This field is required</span
+            >
+          </div>
         </div>
 
         <!-- ===============Email Field =================== -->
 
         <div class="w-full flex flex-col gap-2">
-             <label for="email-add" class="font-normal text-[var(--Grey-900-darker)]">Email Address <span class="ml-2 text-[var(--Green-600-medium)]"> *</span></label>
+          <label
+            for="email-add"
+            class="font-normal text-[var(--Grey-900-darker)]"
+            >Email Address
+            <span class="ml-2 text-[var(--Green-600-medium)]"> *</span></label
+          >
 
-           <input type="email" name="email-add" class="emailAddress  border border-[var(--Grey-500-medium)] rounded-md w-full px-4 py-2 cursor-pointer hover:border-[var(--Green-600-medium)]"
-           
-           >
+          <input
+            type="email"
+            name="email-add"
+            class="emailAddress border border-[var(--Grey-500-medium)] rounded-md w-full px-4 py-2 cursor-pointer hover:border-[var(--Green-600-medium)]"
+          />
 
-           <span class="error-em text-[14px] text-[var(--Red)] hidden">Please enter a valid email address</span>
+          <span class="error-em text-[14px] text-[var(--Red)] hidden"
+            >Please enter a valid email address</span
+          >
         </div>
 
-         <!-- ==================Query Type===================-->
+        <!-- ==================Query Type===================-->
 
-        <div class="w-full flex flex-col gap-2"> 
-              <label for="q-type" class="font-normal text-[var(--Grey-900-darker)] ">Query Type <span class="ml-2 text-[var(--Green-600-medium)]"> *</span></label>
+        <div class="w-full flex flex-col gap-2">
+          <label for="q-type" class="font-normal text-[var(--Grey-900-darker)]"
+            >Query Type
+            <span class="ml-2 text-[var(--Green-600-medium)]"> *</span></label
+          >
 
-        <div class="w-full flex flex-col sm:flex-row gap-4 items-center">
-              <div class="border rounded-md flex flex-1 px-4 py-2 gap-3 border-[var(--Grey-500-medium)] w-full">
-          <input type="radio" class="query cursor-pointer hover:border-[var(--Green-600-medium)] hover:bg-[var-(--Green-600-medium)]  accent-[var(--Green-600-medium)] " name="q-type" value="General Enquiry ">
-          <label for="" class="font-normal text-[var(--Grey-900-darker)]">General Enquiry</label>
+          <div class="w-full flex flex-col sm:flex-row gap-4 items-center">
+            <div
+              class="border rounded-md flex flex-1 px-4 py-2 gap-3 border-[var(--Grey-500-medium)] w-full"
+            >
+              <input
+                type="radio"
+                class="query cursor-pointer hover:border-[var(--Green-600-medium)] hover:bg-[var-(--Green-600-medium)] accent-[var(--Green-600-medium)]"
+                name="q-type"
+                value="General Enquiry "
+              />
+              <label for="" class="font-normal text-[var(--Grey-900-darker)]"
+                >General Enquiry</label
+              >
             </div>
 
-            <div class="border rounded-md flex flex-1 px-4 py-2 gap-3 border-[var(--Grey-500-medium)] w-full">
-                <input type="radio" class="query cursor-pointer hover:border-[var(--Green-600-medium)] 
-                accent-[var(--Green-600-medium)]" name="q-type"  value="Support Request">
-                <label for="" class="font-normal text-[var(--Grey-900-darker)]">Support Request</label>
+            <div
+              class="border rounded-md flex flex-1 px-4 py-2 gap-3 border-[var(--Grey-500-medium)] w-full"
+            >
+              <input
+                type="radio"
+                class="query cursor-pointer hover:border-[var(--Green-600-medium)] accent-[var(--Green-600-medium)]"
+                name="q-type"
+                value="Support Request"
+              />
+              <label for="" class="font-normal text-[var(--Grey-900-darker)]"
+                >Support Request</label
+              >
             </div>
+          </div>
+          <span class="error-qt text-[14px] text-[var(--Red)] hidden"
+            >Please select a query type</span
+          >
         </div>
-        <span class="error-qt text-[14px] text-[var(--Red)] hidden">Please select a query type</span>
+
+        <!-- ================Message Field================== -->
+
+        <div class="w-full flex flex-col gap-2">
+          <label for="msg" class="font-normal text-[var(--Grey-900-darker)]"
+            >Message
+            <span class="ml-2 text-[var(--Green-600-medium)]"> *</span></label
+          >
+          <textarea
+            name="msg"
+            id=""
+            rows="4"
+            class="messageContent cursor-pointer border rounded-md flex sm:flex-1 h-60 px-4 py-2 gap-3 b border-[var(--Grey-500-medium)] hover:border-[var(--Green-600-medium)] resize-none"
+          ></textarea>
+
+          <span class="error-msg text-[14px] text-[var(--Red)] hidden"
+            >This field is required</span
+          >
         </div>
 
-         <!-- ================Message Field================== -->
-
-         <div class="w-full flex flex-col gap-2">
-            <label for="msg" class="font-normal text-[var(--Grey-900-darker)] ">Message <span class="ml-2 text-[var(--Green-600-medium)]"> *</span></label>
-            <textarea name="msg" id="" rows="4"  class="messageContent cursor-pointer border rounded-md flex sm:flex-1 h-60 px-4 py-2 gap-3 b border-[var(--Grey-500-medium)] hover:border-[var(--Green-600-medium)] resize-none"></textarea>
-
-            <span class="error-msg text-[14px] text-[var(--Red)] hidden">This field is required</span>
-         </div>
-
-          <!-- =================Consent================= -->
+        <!-- =================Consent================= -->
 
         <div class="flex flex-col items-start gap-2">
           <div class="flex items-center gap-3 cursor-pointer">
@@ -114,23 +179,17 @@
             >To submit this form, please consent to being contacted</span
           >
         </div>
-     
-          
 
-       
+        <!-- ================Submit button================== -->
+        <button
+          class="border w-full py-3 rounded-md text-white font-bold bg-[var(--Green-600-medium)] cursor-pointer hover:bg-[#06382e]"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
 
-
-           <!-- ================Submit button================== -->
-            <button class="border w-full py-3 rounded-md text-white font-bold bg-[var(--Green-600-medium)] cursor-pointer hover:bg-[#06382e]">Submit</button>
-
-        
-    </form>
-   </div>
-
-
- <!-- ================================== -->
+    <!-- ================================== -->
     <script src="/main.js"></script>
-
-    
-</body>
+  </body>
 </html>
