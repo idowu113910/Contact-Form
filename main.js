@@ -132,10 +132,10 @@ if (messageInput.value === "") {
 
 // Validate Consent
 if (!consentInput.checked) {
-    showError(err, true);
+    showError(err, true, consentInput );
     isValid = false;
 }  else {
-    showError(err, false);
+    showError(err, false, consentInput);
 }
 
 //  If all fields are valid, log the data in an object
